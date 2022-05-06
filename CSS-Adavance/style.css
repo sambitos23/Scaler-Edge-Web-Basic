@@ -1,0 +1,69 @@
+div {
+  height: 70px;
+  width: 70px;
+  margin: 30px;
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  font-size: 30pt; /* pt means points, we use this in text size. Typewriter is use 8pt or 10pt as default. 
+  pt is defined system's font size but px not define that */
+  transition: 2s;
+}
+
+div:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+div:nth-child(2) {
+  transform: rotateY(45deg); /* rotateY is the same as rotate along with Y axis */
+}
+
+div:nth-child(3) {
+  transform: scaleX(2) scaleY(0.5); /* Scle large 2x from X & squece 1/2 from Y axis */
+}
+
+div:nth-child(4) {
+  transform: skewX(10deg) /* rambas -> paralal to x axis will shifted */
+}
+
+div:nth-child(5):hover {
+  transform: rotateZ(360deg);
+}
+
+div:nth-child(6):hover {
+  transform: translateY(100px);
+}
+
+div:nth-child(7):hover {
+  margin-top: 130px;
+}
+
+div:nth-child(8):hover {
+  transform: translateX(100px) rotateZ(360deg);
+}
+
+div:nth-child(9):hover {
+  transform: rotateZ(360deg) translateX(100px); /* It's create spiral moon*/
+}
+
+div:nth-child(10) {
+  animation-name: wheel;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wheel {
+  0% {
+  }
+  25% {
+    transform: scale(2) rotateZ(360deg);
+  }
+  50% {
+    transform: translateX(100px) rotateZ(180deg);
+  }
+  75% {
+    transform: scale(0.5) rotateZ(-360deg);
+  }
+  100% {
+  }
+}
