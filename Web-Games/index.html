@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 
+    The script get executed fast then the body will be rendered in the page, 
+    so when the script was getting excuted by that time the browser have not render the body yet
+    so initially there is no gamebox in the page
+
+    // gamebox = null (console.log)
+  -->
+  <!-- <script src="script.js"></script> -->
+  <!-- 
+    async defer => The script is loaded asyncronusly and the execution of this script is defered 
+    after the body has been rendered
+
+    // gamebox = <div style="height: 400px;width: 400px"></div> = not null (console.log)
+  -->
+  <!-- <script async defer src="script.js"></script> -->
+</head>
+<body>
+  <!-- <div style="height: 400px;width: 400px" id="gamebox"></div> -->
+  <canvas style="background-color: aqua;" height="400" width="800" id="gamebox"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: aqua;
+  padding: 20px 40px;
+  box-shadow: 2px 2px 5px rgb(83, 83, 83);
+  transition: 1s;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  transform: translateX(-4px) translateY(-4px);
+  box-shadow: 6px 6px 10px rgb(83, 83, 83);
+}
+
+button:focus {
+  transform: translateX(0px) translateY(0px);
+  box-shadow: 4px 4px 10px rgb(83, 83, 83);
+  transition: 0.2s; 
+}
+
+button:active {
+  transform: translateX(3px) translateY(3px);
+  box-shadow: 2px 2px 2px rgb(83, 83, 83);
+  transition: 0.2s;  
+}
